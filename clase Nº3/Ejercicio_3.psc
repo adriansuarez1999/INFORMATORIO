@@ -1,4 +1,4 @@
-Algoritmo login_simulado
+Algoritmo ejercicio_3
 	definir usuario, contraseña como cadena
 	definir intentos Como Entero
 	intentos = 3
@@ -8,14 +8,18 @@ Algoritmo login_simulado
 		Escribir "Ingrese su contraseña"
 		Leer contraseña
 		
-		//usuario va a ser = admin y contraseña = facil123
-		si usuario = "admin" y contraseña = "facil123" Entonces
+		//usuario va a ser = admin y contraseña = 1234
+		si usuario = "admin" y contraseña = "1234" Entonces
 			Escribir "usuario y contraseña correctos. BIENVENIDO!!"
 			intentos = 0
 		SiNo
 			Escribir "usuario o contraseñas incorrectas"
 			intentos = intentos-1
+			si intentos == 0 Entonces
+				Escribir "Limite de intentos superados..."
+			FinSi
 		FinSi
+		
 	Fin Mientras
-	Escribir "Limite de intentos superados..."
+	
 FinAlgoritmo
